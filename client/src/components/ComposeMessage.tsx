@@ -28,7 +28,7 @@ const NewMessage: React.FC = () => {
   const handleSend = async () => {
     try {
       const response = await axios.post(
-        "http://localhost:4000/api/send-otp",
+        "https://sms-otp-service.onrender.com/api/send-otp",
         {
           contactId: parseInt(id!),
           customMessage: message,

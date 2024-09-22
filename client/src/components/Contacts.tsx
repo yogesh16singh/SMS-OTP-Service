@@ -3,7 +3,6 @@ import axios from "axios";
 import {
   Table,
   TableBody,
-  TableCaption,
   TableCell,
   TableHead,
   TableHeader,
@@ -25,7 +24,7 @@ const ContactsList: React.FC = () => {
   useEffect(() => {
     const fetchContacts = async () => {
       try {
-        const response = await axios.get("http://localhost:4000/api/contacts");
+        const response = await axios.get("https://sms-otp-service.onrender.com/api/contacts");
         setContacts(response.data);
       } catch (error) {
         console.error("Error fetching contacts:", error);

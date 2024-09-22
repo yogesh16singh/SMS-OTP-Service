@@ -19,7 +19,7 @@ const ContactInfo: React.FC = () => {
   useEffect(() => {
     const fetchContact = async () => {
       try {
-        const response = await axios.get(`http://localhost:4000/api/contacts/${id}`);
+        const response = await axios.get(`https://sms-otp-service.onrender.com/api/contacts/${id}`);
         setContact(response.data);
       } catch (error) {
         console.error('Error fetching contact:', error);
